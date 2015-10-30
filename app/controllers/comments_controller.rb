@@ -4,6 +4,6 @@ class CommentsController < ApplicationController
     #                           content: params[:comment])
     @post = Post.find(params[:id])
     @post.comments.create!(content: params[:comment])
-    redirect_to post_path(@post)
+    redirect_to root_path
   end
 end
