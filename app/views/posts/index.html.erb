@@ -4,6 +4,8 @@
   <% @posts.each do |post| %>
       <li class="post">
         <%= link_to post.title, post.link %>
+        <%= link_to "Comments", comments_path(post) %>
+
 
       </li>
   <% end %>
