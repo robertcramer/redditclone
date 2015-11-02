@@ -15,7 +15,5 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  def current_user
-    @user(username)
-  end
+
 end
