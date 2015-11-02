@@ -4,7 +4,9 @@
   <% @posts.each do |post| %>
       <li class="post">
         <h4><%= link_to post.title, post.link %></h4>
+        <h6>By: <%= post.user.username  %> AT: <%= post.created_at %></h6>
         <%= link_to "Comments", comments_path(post) %>
+
 
 
       </li>
