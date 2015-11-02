@@ -14,4 +14,8 @@ class RegistrationsController < ApplicationController
       render :new
     end
   end
+
+  def current_user
+    @user(username)
+  end
 end
