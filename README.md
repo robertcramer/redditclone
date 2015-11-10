@@ -25,6 +25,8 @@ Things you may want to cover:
 
 * Test
 
+[![Build Status](https://travis-ci.org/dcooper12/https://github.com/dcooper12/redditclone.svg?branch=master)](http://travis-ci.org/dcooper12/https://github.com/dcooper12/redditclone)
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
