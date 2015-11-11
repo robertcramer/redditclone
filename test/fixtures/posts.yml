@@ -2,10 +2,10 @@
 
 one:
   user_id: 1
-  title: MyString
-  content: MyText
+  title: Check this out!
+  content: http://sports.yahoo.com/blogs/nfl-shutdown-corner/jim-harbaugh-takes-shot-at-49ers-coaches--coaching--in-ability-151237742.html
 
 two:
   user_id: 1
-  title: MyString
-  content: MyText
+  title: Another Day another Article
+  content: http://sports.yahoo.com/blogs/mlb-big-league-stew/report--jose-reyes-arrested-for-domestic-violence-incident-that-sent-wife-to-er-045936912.html
