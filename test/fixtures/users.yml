@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+darryl:
   email: dc@gmail.com
   username: darrylcooper
+  password_digest: password
 
-two:
+robert:
   email: free@MAIL.COM
   username: madeline
+  password_digest: password
