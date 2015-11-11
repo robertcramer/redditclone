@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/dcooper12/redditclone.svg?branch=master)](https://travis-ci.org/dcooper12/redditclone)
+[![Build Status](https://travis-ci.org/dcooper12/dcooper12/redditclone.svg?branch=master)](http://travis-ci.org/dcooper/dcooper12/redditclone)

@@ -7,12 +7,15 @@ class UserTest < ActiveSupport::TestCase
 
   test "that a user CANNOT be saved if its empty" do
   	user = User.new
-  	assert_not user.save
+  	refute user.save
+    assert user.errors[:username].present?
   end
   
   test "CANNOT save user if email is empty" do
   	user = User.new
-  	assert_not user.save
   	
+    refute user.save
+    assert user.errors[:email].present?
   end
+  
 end
