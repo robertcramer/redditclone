@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def test_new_valid_post
+    post = Post.new (title: params[:title],
+                      link: params[:link])
+    assert post.valid?
+  end
 end
