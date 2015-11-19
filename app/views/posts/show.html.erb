@@ -1,0 +1,37 @@
+<h2><%= @post.title %></h2>
+<h4>Tagged: <%= @post.tag_names %></h4>
+<h4>Written on: <%= @post.written_at %></h4>
+
+<div class="post-body">
+  <%= simple_format(@post.content) %>
+</div>
+
+<%= link_to "Posts Index", posts_path %>
+
+<% if current_user %>
+  <%= link_to "Edit this Post", edit_post_path(@post) %>
+  <%= link_to "Delete this Post", post_path(@post), method: :delete %>
+<% end %>
+
+<div class="comment-form">
+    <h3>Add a Comment</h3>
+    <% # render partial: "comments/form" %>
+    <%= form_for([@post, @comment]) do |f| %>
+        <div class="comment-field">
+          <%= f.label "Comment: " %>
+          <%= f.text_area :content %>
+        </div>
+
+        <%= f.submit "Add Your Comment!" %>
+    <% end %>
+</div>
+
+<h2>Insightful Comments</h2>
+<div class="comments">
+    <% @post.comments.each do |comment| %>
+        <div class="comment">
+            <em>Written: <%= time_ago_in_words(comment.created_at) %> ago</em><br/>
+            <%= simple_format(comment.content) %>
+        </div>
+    <% end %>
+</div>
