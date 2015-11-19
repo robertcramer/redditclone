@@ -11,20 +11,26 @@ Rails.application.routes.draw do
   root to: "posts#index"
 
   ## Registration Routes
-  get "signup", to: "registrations#new"
-  post "signup", to: "registrations#create"
+  # get "signup", to: "registrations#new"
+  # post "signup", to: "registrations#create"
+
+  resources :signup, only: [:new, :create], controller: "registration" 
 
   ## Session Routes
-  get "login", to: "sessions#new"
-  post "login", to: "sessions#create"
-  delete "login", to: "sessions#destroy"
+  # get "login", to: "sessions#new"
+  # post "login", to: "sessions#create"
+  # delete "login", to: "sessions#destroy"
+
+  resources :login, only: [:new, :create, destroy:], controller: "session"
 
   ## Posts Routes
-  get "posts", to: "posts#index"
-  get "posts/new", to: "posts#new"
-  post "posts", to: "posts#create"
-  get "posts/:id", to: "posts#show", as: "post"
-  delete "posts/:id", to: "posts#destroy"
+  # get "posts", to: "posts#index"
+  # get "posts/new", to: "posts#new"
+  # post "posts", to: "posts#create"
+  # get "posts/:id", to: "posts#show", as: "post"
+  # delete "posts/:id", to: "posts#destroy"
+
+  resources :posts, except: [update:, edit:]
   
   ## Comments
   get "posts/:id/comments", to: "comments#index"
@@ -34,7 +40,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    
 
   # Example resource route with options:
   #   resources :products do
