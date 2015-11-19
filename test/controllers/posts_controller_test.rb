@@ -6,12 +6,12 @@ class PostsControllerTest < ActionController::TestCase
 	end
 
 	# test "logged in users can delete a post" do
-	# 	# assert_difference('Post.count', -1) do
+	# 	assert_difference('Post.count', -1) do
 	# 	delete :destroy, id: @post
-	# # end
+	# end
 
 	# assert_redirected_to posts_path
-  # end
+ #  end
 
   	test "should show post" do
 	  	get :show, id: @post
