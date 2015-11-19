@@ -10,31 +10,35 @@ Rails.application.routes.draw do
 
   root to: "posts#index"
 
-  ## Registration Routes
+  # # Registration Routes
   # get "signup", to: "registrations#new"
   # post "signup", to: "registrations#create"
 
   resources :signup, only: [:new, :create], controller: "registration" 
 
-  ## Session Routes
+  # # Session Routes
   # get "login", to: "sessions#new"
   # post "login", to: "sessions#create"
   # delete "login", to: "sessions#destroy"
 
-  resources :login, only: [:new, :create, destroy:], controller: "session"
+  resources :login, only: [:new, :create, :destroy], controller: "session"
 
-  ## Posts Routes
+  # # Posts Routes
   # get "posts", to: "posts#index"
   # get "posts/new", to: "posts#new"
   # post "posts", to: "posts#create"
   # get "posts/:id", to: "posts#show", as: "post"
   # delete "posts/:id", to: "posts#destroy"
 
-  resources :posts, except: [update:, edit:]
+  resources :posts, except: [:update, :edit]
   
-  ## Comments
-  get "posts/:id/comments", to: "comments#index"
-  post "posts/:id/comments", to: "comments#create", as: "comments"
+  # ## Comments
+  # get "posts/:id/comments", to: "comments#index"
+  # post "posts/:id/comments", to: "comments#create", as: "comments"
+
+  resources :posts do
+    resources :comments, only: [:create, :index]
+  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
