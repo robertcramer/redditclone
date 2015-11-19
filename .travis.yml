@@ -5,3 +5,5 @@ env:
   - DB=sqlite3
 script:
   - RAILS_ENV=test bundle exec rake db:migrate test
+  before_script:
+  - psql -c 'create database redditclone-test' -U postgres

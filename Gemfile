@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Kaminari for pagination, why would I do it by hand?
 gem "kaminari"
 
+# Postgres is a lovely database. 
+gem 'pg'
+
 gem 'bootstrap-sass', '~>3.2.0'
 
 gem 'autoprefixer-rails'
@@ -35,6 +38,9 @@ gem 'heroku'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# for the avatar
+gem 'paperclip', '~> 4.3'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -46,8 +52,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  # # Use sqlite3 as the database for Active Record
+  # gem 'sqlite3'
 end
 
 group :development do
@@ -59,7 +65,7 @@ group :development do
 end
 
 group :production do
-	gem "pg"
+	# gem "pg"
 	gem "rails_12factor"
 
 end
