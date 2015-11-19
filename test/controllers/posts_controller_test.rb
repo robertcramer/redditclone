@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
  def login!
-   session[:user_id] = user(:user_id)
+   session[:user_id] = user(:user_id).id
  end
 
  test "logged in users can make posts" do
