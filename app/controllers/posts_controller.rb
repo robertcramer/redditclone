@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     post = current_user.posts.create(title: params[:title],
                                      link: params[:link],
                                      written_at: DateTime.now)
+
     redirect_to root_path
   end
 
