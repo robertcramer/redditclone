@@ -45,6 +45,9 @@ gem 'paperclip', '~> 4.3'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# Use to search db
+gem 'pg_search'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
