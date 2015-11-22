@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	
   has_secure_password
   has_attached_file :avatar, styles: { thumb: "150x150>" }
   
