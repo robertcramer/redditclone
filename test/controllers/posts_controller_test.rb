@@ -1,26 +1,29 @@
 require 'test_helper'
 
-class PostsControllerTest < ActionController::TestCase
-  setup do
-		@post = posts(:one)
-	end
+# class PostsControllerTest < ActionController::TestCase
 
-	# test "logged in users can delete a post" do
-	# 	assert_difference('Post.count', -1) do
-	# 	delete :destroy, id: @post
-	# end
+# def login_user!
+#     session[:user_id] = users(:darryl).id
+#     # @request.headers['Access-Token'] = users(:darryl).access_token
+#   end
 
-	# assert_redirected_to posts_path
- #  end
+#   test "logged in users can write a new post" do
+#     login_user!
+#     get :new
+#     assert_response 200
+#     assert_not_nil assigns(:post)
+#   end
 
-  	test "should show post" do
-	  	get :show, id: @post
-	  	assert_response :success
-  	end
+#   test "non-logged in users can't write posts" do
+#     get :new
+#     assert_redirected_to login_path
+#   end
 
-  	test "should get new post" do
-  		get :index
-  		assert_response :success
-  		assert_not_nil assigns(:posts)
-  	end
-end
+#   test "editing a post succeeds with valid IDs" do
+#     login_user!
+#     get :edit, { id: posts(:one).id }
+#     assert_response :success
+#     assert_not_nil assigns(:post)
+#   end
+# end
+
