@@ -48,12 +48,15 @@ gem 'paperclip', '~> 4.3'
 # Use to search db
 gem 'pg_search'
 
+# Search db optimazation
+gem "bullet", :group => "development"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'bullet'
   gem 'pry'
   # # Use sqlite3 as the database for Active Record
   # gem 'sqlite3'
@@ -65,6 +68,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
 end
 
 group :production do
