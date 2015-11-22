@@ -6,5 +6,5 @@ env:
   - DB=postgresql
 script:
   - RAILS_ENV=test bundle exec rake db:migrate test
-  before_script:
-  - psql -c 'create database redditclone-test' -U postgres
+before_script:
+  - psql -c 'create database blerg-test' -U postgres
