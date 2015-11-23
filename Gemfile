@@ -37,6 +37,8 @@ gem 'autoprefixer-rails'
 
 gem 'heroku'
 
+gem 'foreman'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
