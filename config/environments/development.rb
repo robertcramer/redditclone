@@ -40,8 +40,8 @@ Paperclip.options[:command_path] = "/usr/local/bin/"
   # config.action_view.raise_on_missing_translations = true
 
   config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
+    Bullet.enable = false
+    Bullet.alert = false
     Bullet.bullet_logger = true
     Bullet.console = true
 #  Bullet.growl = true
